@@ -19,41 +19,41 @@ function verSigno() {
             imgSigno = (d >= 20) ? "acuario" : "capricornio";
             break;
         case "FEBRERO":
-            imgSigno = (d >= 19) ? "piscis" : "acuario";
+            imgSigno = (d >= 19) ? "Pisis" : "acuario";
             break;
         case "MARZO":
-            imgSigno = (d >= 21) ? "aries" : "piscis";
+            imgSigno = (d >= 21) ? "aries" : "Pisis";
             break;
         case "ABRIL":
-            imgSigno = (d >= 20) ? "tauro" : "aries";
+            imgSigno = (d >= 20) ? "Tauro" : "aries";
             break;
         case "MAYO":
-            imgSigno = (d >= 21) ? "geminis" : "tauro";
+            imgSigno = (d >= 21) ? "Geminis" : "Tauro";
             break;
         case "JUNIO":
-            imgSigno = (d >= 21) ? "cancer" : "geminis";
+            imgSigno = (d >= 21) ? "Cancer" : "Geminis";
             break;
         case "JULIO":
-            imgSigno = (d >= 23) ? "leo" : "cancer";
+            imgSigno = (d >= 23) ? "Leo" : "Cancer";
             break;
         case "AGOSTO":
-            imgSigno = (d >= 23) ? "virgo" : "leo";
+            imgSigno = (d >= 23) ? "virgo" : "Leo";
             break;
         case "SEPTIEMBRE":
-            imgSigno = (d >= 23) ? "libra" : "virgo";
+            imgSigno = (d >= 23) ? "Libra" : "virgo";
             break;
         case "OCTUBRE":
-            imgSigno = (d >= 23) ? "escorpio" : "libra";
+            imgSigno = (d >= 23) ? "escorpio" : "Libra";
             break;
         case "NOVIEMBRE":
-            imgSigno = (d >= 22) ? "sagitario" : "escorpio";
+            imgSigno = (d >= 22) ? "Sagitario" : "escorpio";
             break;
         case "DICIEMBRE":
-            imgSigno = (d >= 22) ? "capricornio" : "sagitario";
+            imgSigno = (d >= 22) ? "capricornio" : "Sagitario";
             break;
     }
 
-    signo.src = "img/zodiaco/" + imgSigno + ".jpg";
+    signo.src = "img/" + imgSigno + ".png";
 }
 
 dia.addEventListener("input", verSigno);
@@ -63,8 +63,6 @@ btnReset.onclick = function() {
     dia.value = 1;
     mes.value = "ENERO";
     valorDia.textContent = "DIA 1";
-    fecha.textContent = "1 de ENERO";
+    fecha.textContent = "FECHA";
     signo.src = "img/zodiaco.png";
 };
-
-verSigno();

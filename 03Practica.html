@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
-    <a href="Index.html"> Volver al menu de practicas atrasadas</a>
+    
     <title>PRACTICAS JAVASCRIPT</title>
 
 </head>
-<body>
-    <nav class="navbar bg-primary navbar-dark">
+<body class="bg-light min-vh-100 d-flex flex-column">
+    <nav class="navbar navbar-dark" style="background-color: #990000;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="img/OIP.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -19,11 +19,11 @@
         </div>
     </nav>
 
-    <div class="container p-4 bg-info mt-5 card">
-        <h1 class="text-center">SIGNOS ZODIACALES</h1>
-        <hr>
-        <div class="row align-items-center">
-            <div class="col-md-6">
+    <div class="container-fluid flex-grow-1 p-4 card border-0 rounded-0" style="background-color: #FF5252;">
+        <h1 class="text-center text-white">SIGNOS ZODIACALES</h1>
+        <hr class="text-white">
+        <div class="row align-items-center h-75">
+            <div class="col-md-6 text-white">
                 <h5 id="valorDia">DIA 1</h5>
                 <input type="range" id="dia" class="form-range" min="1" max="31" value="1"> 
                 <br><br>
@@ -51,6 +51,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/signos.js"></script>
 </body>
 </html>
