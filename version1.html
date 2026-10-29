@@ -1,42 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA DEL TRIANGULO</title>
+    
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
     
-<title> AREA DEL TRIANGULO</title>
-<a href="menu.html"></a>
+    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="navbar bg-primary navbar-dark">
+    <nav class="navbar navbar-dark" style="background-color: #990000;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="img/Pesos.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="img/OIP.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 PRACTICAS JAVASCRIPT
-            </a>    
+            </a>
+            <a href="menu.html" class="btn btn-outline-light btn-sm">Menú</a>
         </div>
     </nav>
-<center>
-<h1>AREA DEL TRIANGULO</h1>
-<table width="100%" border>
-<tr>
-<td>
-<h3>BASE</h3>
-<input type="range" id="base" min="1" max="100" value="1" oninput="calcular()">
-<span id="vb">1</span><br>
-<h3>ALTURA</h3>
-<input type="range" id="altura" min="1" max="100" value="1" oninput="calcular()">
-<span id="va">1</span><br>
-<button onclick="reset()">RESET</button>
-</td>
-<td>
-<h1>AREA</h1>
-<h2 id="area">0</h2>
-</td>
-</tr>
-</table>
-</center>
-<script src="version1.js"></script>
+
+    <center>
+        <h1>AREA DEL TRIANGULO</h1>
+        <table width="100%" border="1">
+            <tr>
+                <td>
+                    <h3>BASE</h3>
+                    <input type="range" id="base" min="1" max="100" value="1" oninput="calcular()">
+                    <span id="vb">1</span><br>
+                    <h3>ALTURA</h3>
+                    <input type="range" id="altura" min="1" max="100" value="1" oninput="calcular()">
+                    <span id="va">1</span><br>
+                    <button onclick="reset()"><i class="bi bi-bootstrap-reboot"></i> RESET</button>
+                </td>
+                <td>
+                    <h1>AREA</h1>
+                    <h2 id="area">0</h2>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="version1.js"></script>
 </body>
 </html>
