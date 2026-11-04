@@ -15,3 +15,4 @@ btnSave.onclick=()=>{
     console.log(productos)
     localStorage.setItem("productos",JSON.stringify(productos));
 }
+{}

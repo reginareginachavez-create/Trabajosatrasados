@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <center>
+    <div class="container">
+        <h1>Calculadora de IMC</h1>
+        <form id="imcForm">
+            <div class="form-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" class="form-control" id="peso" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="altura">Altura (m):</label>
+                <input type="number" class="form-control" id="altura" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-bootstrap-reboot"></i>Calcular IMC</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <img src="img/image.png" alt="">
+
+    </center>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="imc.js"></script>
+</body>
+</html>
