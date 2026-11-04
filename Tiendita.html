@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <title>Tiendita</title>
+</head>
+<body>
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Piano.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Tiendita
+            </a>
+        </div>
+    </nav>
+
+    <div class="container p-4 bg-inverse mt-5 card">
+        <h1 class="text-center fg-black">TIENDITA</h1> <hr>
+        <button type="button" class="btn btn-danger w-25" style="background-color: #dc3545 !important; color: white !important; border: none !important;" onclick="document.getElementById('addProducto').showModal()">
+    <i class="bi bi-cart4"></i>Agregar
+</button>
+         <Table class="table table-striped table-hover mt-3">
+            <tr>
+                <td>PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>CALIDAD</td>
+                <td>IMPORTE</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+         </Table>
+
+    </div>
+    <dialog class="dialog" id="addProducto">
+    <div class="dialog-header">
+        <h1 class="dialog-title">AGREGAR PRODUCTO</h1>
+        <button type="button" class="btn-close" onclick="document.getElementById('addProducto').close()" aria-label="Close"></button>
+    </div>
+    <div class="dialog-body">
+        <h3>NOMBRE</h3>
+        <input type="text" id="nombre" class="form-control">
+        <h3>PRECIO</h3>
+        <input type="text" id="precio" class="form-contol">
+    </div>
+    <div class="dialog-footer">
+
+    </div>
+    <div class="dialog-footer">
+        <button type="button" class="btn-solid theme-danger" onclick="document.getElementById('addProducto').close()"><i class="bi bi-x-circle-fill"></i>Cancelar</button>
+        <button type="button" class="btn-solid theme-success" id="btnSave"><i class="bi bi-save"></i>Guardar</button>
+    </div>
+</dialog>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="Tiendita.js"></script>
+</body>
+</html>
