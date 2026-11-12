@@ -1,37 +1,42 @@
-document.querySelector("#imcForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    calcularIMC();
-});
+const peso = document.querySelector('#peso');
+const altura = document.querySelector('#altura');
 
 function calcularIMC() {
-    let peso = parseFloat(document.querySelector("#peso").value);
-    let altura = parseFloat(document.querySelector("#altura").value);
-
-    if (isNaN(peso) || isNaN(altura) || altura <= 0) return;
-
-    let imc = peso / (altura * altura);
-    let mensaje = "";
-    let color = "";
-
-    if (imc < 18.5) {
-        mensaje = "Peso insuficiente";
-        color = "gold";
-    } else if (imc >= 18.5 && imc < 25) {
-        mensaje = "Peso normal";
-        color = "green";
-    } else if (imc >= 25 && imc < 30) {
-        mensaje = "Sobrepeso";
-        color = "orange";
-    } else {
-        mensaje = "Obesidad";
-        color = "red";
+    for (let i = 1; i <= 6; i++) {
+        let caja = document.querySelector('#imc' + i);
+        caja.style.transition = "0.4s";
+        caja.style.transform = "scale(1)";
+        caja.style.position = "relative";
+        caja.style.zIndex = "1";
     }
 
-    document.querySelector("#resultado").innerHTML = `
-        <div style="font-size: 30px; margin-top: 15px;">
-            <b style="color: blue; font-size: 40px;">${imc.toFixed(2)}</b>
-            <br>
-            <span style="color: ${color}; font-weight: bold;">${mensaje}</span>
-        </div>
-    `;
+    let p = parseFloat(peso.value);
+    let a = parseFloat(altura.value) / 100;
+    let imc = (p / (a * a)).toFixed(2);
+
+    document.querySelector('#vpeso').textContent = p;
+    document.querySelector('#valtura').textContent = a.toFixed(2);
+    document.querySelector('#imc').textContent = imc;
+
+    let tipo = 6;
+    if (imc < 18.5) tipo = 1;
+    else if (imc < 25) tipo = 2;
+    else if (imc < 30) tipo = 3;
+    else if (imc < 35) tipo = 4;
+    else if (imc < 40) tipo = 5;
+
+    let activa = document.querySelector('#imc' + tipo);
+    activa.style.transform = "scale(1.1)";
+    activa.style.zIndex = "5";
 }
+
+function reiniciar() {
+    peso.value = 31;
+    altura.value = 120;
+    calcularIMC();
+}
+
+peso.oninput = calcularIMC;
+altura.oninput = calcularIMC;
+
+calcularIMC();
